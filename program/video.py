@@ -66,7 +66,7 @@ async def vplay(c: Client, m: Message):
                 InlineKeyboardButton(text="• MENU", callback_data="cbmenu"),
                 InlineKeyboardButton(text="• CLOSE", callback_data="cls"),
             ],[
-                InlineKeyboardButton(text="✨ CHANNEL, url=f"https://t.me/{UPDATES_CHANNEL}"),
+                InlineKeyboardButton(text="✨ CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}"),
             ]
         ]
     )
@@ -301,7 +301,7 @@ async def vstream(c: Client, m: Message):
                 InlineKeyboardButton(text="• MENU", callback_data="cbmenu"),
                 InlineKeyboardButton(text="• CLOSE", callback_data="cls"),
             ],[
-                InlineKeyboardButton(text="✨ CHANNEL, url=f"https://t.me/{UPDATES_CHANNEL}"),
+                InlineKeyboardButton(text="✨ CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}"),
             ]
         ]
     )

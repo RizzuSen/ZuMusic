@@ -35,7 +35,7 @@
         "BOT_NAME": {
             "description": "fill with your bot name from @BotFather",
             "required": true ,
-            "hdiiofficialbot"
+            "value": "hdiiofficialbot"
         },
         "ASSISTANT_NAME": {
             "description": "fill with the assistant username account without @",

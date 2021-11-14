@@ -68,11 +68,14 @@ async def cbguides(_, query: CallbackQuery):
 
 Jika userbot tidak bergabung ke video chat, pastikan jika video chat sudah aktif, atau ketik /userbotleave lalu ketik /userbotjoin lagi.
 
-Jika Anda memiliki pertanyaan lanjutan tentang bot ini, Anda dapat menyampaikannya ke saya: @hdiiofficial
+Jika Anda memiliki pertanyaan lanjutan tentang bot ini, Anda dapat menyampaikannya ke Owner
 
 Didukung oleh {BOT_NAME} """,
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🔙 Go Back", callback_data="cbstart")]]
+            [[InlineKeyboardButton("🔙 Go Back", callback_data="cbstart")]],
+            [
+                    InlineKeyboardButton("📚 Basic Cmd", callback_data="cbbasic")
+                ],
         ),
     )
 

@@ -74,7 +74,7 @@ Didukung oleh {BOT_NAME} """,
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 Go Back", callback_data="cbstart")]],
             [
-                    InlineKeyboardButton("📚 Basic Cmd", callback_data="cbbasic")
+                    InlineKeyboardButton("OWNER", url="https://t.me/{OWNER_NAME}")
                 ],
         ),
     )

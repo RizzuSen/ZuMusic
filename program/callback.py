@@ -72,7 +72,7 @@ Jika Anda memiliki pertanyaan lanjutan tentang bot ini, Anda dapat menyampaikann
 
 Didukung oleh {BOT_NAME} """,
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🔙 Go Back", callback_data="cbstart")]],
+          [[InlineKeyboardButton("🔙 Go Back", callback_data="cbstart")]]
        
         ),
     )

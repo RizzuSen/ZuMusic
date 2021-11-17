@@ -71,6 +71,11 @@
             "description": "fill with your telegram account nickname/name",
             "required": true,
             "value": "hdiiofficial"
+        },
+       "ALIVE_IMG": {
+            "description": "ALIVE BUAT FOTO PAS COMMAND ALIVE",
+            "required": false ,
+            "value": ""
         }
     },
     "addons": [],

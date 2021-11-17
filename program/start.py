@@ -55,9 +55,7 @@ async def start_(client: Client, message: Message):
         f"""✨ **Welcome {message.from_user.mention()} !**\n
 💭 [{BOT_NAME}](https://t.me/{BOT_USERNAME}) **Membantu Anda Memutar Musik dan Video di GROUP melalui obrolan video**
 
-💡 **Cari tau semua Perintah Bot dan cara kerjanya dengan mengklik tombol » 📚commands**
-
-🔖 **Untuk mengetahui cara menggunakan bot ini,silahkan klik tombol » ❓ Basic Guide**
+💡 **CARA PENGGUNAAN BOT KLIK COMMAND »HELP MENU **
 """,
         reply_markup=InlineKeyboardMarkup(
             [
@@ -67,7 +65,7 @@ async def start_(client: Client, message: Message):
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("HELP MENU", url=f"https://telegra.ph/commandhdiiofficialmusic-11-17")],
+                [InlineKeyboardButton("🔖HELP MENU❓", url=f"https://telegra.ph/commandhdiiofficialmusic-11-17")],
                 [
                     InlineKeyboardButton(
                         "👥GRUOP SUPPORT", url=f"https://t.me/{GROUP_SUPPORT}"

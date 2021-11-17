@@ -67,23 +67,14 @@ async def start_(client: Client, message: Message):
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("❓ Basic Guide", callback_data="cbhowtouse")],
-                [
-                    InlineKeyboardButton("📚 Commands", callback_data="cbcmds"),
-                    InlineKeyboardButton("🗂️FULL COMMAND🗂️", url=f"https://telegra.ph/commandhdiiofficialmusic-11-17"),
-                ],
+                [InlineKeyboardButton("HELP MENU", url=f"https://telegra.ph/commandhdiiofficialmusic-11-17")],
                 [
                     InlineKeyboardButton(
-                        "👥 Official Group", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "👥GRUOP SUPPORT", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "📣 Official Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "📣CH SUPPORT", url=f"https://t.me/{UPDATES_CHANNEL}"
                     ),
-                ],
-                [
-                    InlineKeyboardButton(
-                        "🌐 Source Code", url="https://github.com/hdiiofficial/NOTICE"
-                    )
                 ],
             ]
         ),
@@ -110,7 +101,7 @@ async def alive(client: Client, message: Message):
         ]
     )
 
-    alive = f"**Hello {message.from_user.mention()}, saya {BOT_NAME}**\n\n✨ Bot berfungsi dengan normal\n🍀 My Master: [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n✨ Bot Version: `v{__version__}`\n🍀 Pyrogram Version: `{pyrover}`\n✨ Python Version: `{__python_version__}`\n🍀 PyTgCalls version: `{pytover.__version__}`\n✨ Uptime Status: `{uptime}`\n\n**Terima Kasih telah menambahkan saya,untuk memutar Video dan Musik di Group Anda**\n\nDeveloved by @hdiiofficial ☕"
+    alive = f"**Hello {message.from_user.mention()}, saya {BOT_NAME}**\n\n✨ Bot berfungsi dengan normal\n🍀 My Master: [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n✨ Bot Version: `v{__version__}`\n🍀 Pyrogram Version: `{pyrover}`\n✨ Python Version: `{__python_version__}`\n🍀 PyTgCalls version: `{pytover.__version__}`\n✨ Uptime Status: `{uptime}`\n\n**Terima Kasih Telah Menambahkan Saya Ke GROUP Anda**\nSEMOGA HARIMU MENYENANGKAN\n\n\nDeveloved by @hdiiofficial ☕"
 
     await message.reply_photo(
         photo=f"{ALIVE_IMG}",

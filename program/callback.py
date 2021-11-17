@@ -1,4 +1,4 @@
-# Copyright (C) 2021 By VeezMusicProject
+# Copyright (C) 2021 By hdiiofficial
 
 from driver.queues import QUEUE
 from pyrogram import Client, filters
@@ -19,9 +19,8 @@ async def cbstart(_, query: CallbackQuery):
         f"""✨ **Welcome [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**\n
 💭 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) Membantu Anda memutar musik dan video di grup melalui obrolan video!**
 
-💡 **Cari tau semua Perintah Bot dan cara kerjanya dengan mengklik tombol » 📚command!**
-
-🔖 **Untuk mengetahui cara menggunakan bot ini, silakan klik tombol » ❓ Basic Guide!**""",
+💡 **CARA PENGGUNAAN BOT KLIK COMMAND »HELP MENU **
+""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -30,23 +29,14 @@ async def cbstart(_, query: CallbackQuery):
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("❓ Basic Guide", callback_data="cbhowtouse")],
-                [
-                    InlineKeyboardButton("📚 Commands", callback_data="cbcmds"),
-                    InlineKeyboardButton("🗂️FULL COMMAND🗂️", url=f"https://telegra.ph/commandhdiiofficialmusic-11-17"),
-                ],
+                [InlineKeyboardButton("🔖HELP MENU❓", url=f"https://telegra.ph/commandhdiiofficialmusic-11-17")],
                 [
                     InlineKeyboardButton(
-                        "👥 Official Group", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "👥GRUOP SUPPORT", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "📣 Official Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "📣CH SUPPORT", url=f"https://t.me/{UPDATES_CHANNEL}"
                     ),
-                ],
-                [
-                    InlineKeyboardButton(
-                        "🌐 Source Code", url="https://github.com/hdiiofficial/NOTICE"
-                    )
                 ],
             ]
         ),
@@ -172,7 +162,7 @@ async def cbmenu(_, query: CallbackQuery):
         return await query.answer("Anda adalah Admin Anonim !\n\n» kembali ke akun pengguna dari hak admin.")
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 BUTTON INI CUMA UNTUK ADMIN", show_alert=True)
+        return await query.answer("💡 EMANG LU ADMIN? YANG BISA MENCET ADMIN DOANG", show_alert=True)
     chat_id = query.message.chat.id
     if chat_id in QUEUE:
           await query.edit_message_text(
@@ -198,5 +188,5 @@ async def cbmenu(_, query: CallbackQuery):
 async def close(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 BUTTON INI CUMA UNTUK ADMIN", show_alert=True)
+        return await query.answer("💡 EMANG LU ADMIN? YANG BISA MENCET ADMIN DOANG", show_alert=True)
     await query.message.delete()

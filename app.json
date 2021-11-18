@@ -75,7 +75,7 @@
        "ALIVE_IMG": {
             "description": "ALIVE BUAT FOTO PAS COMMAND ALIVE",
             "required": false ,
-            "value": "https://telegra.ph/file/360cdc2481c0d16400df0.png"
+            "value": "https://telegra.ph/file/d76654ee9ce0cbbf437ca.jpg"
         },
         "IMG_1": {
             "description": "ADD QUEOUE",

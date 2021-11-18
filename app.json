@@ -78,12 +78,12 @@
             "value": "https://telegra.ph/file/360cdc2481c0d16400df0.png"
         },
         "IMG_1": {
-            "description": "ALIVE BUAT FOTO PAS COMMAND ALIVE",
+            "description": "ADD QUEOUE",
             "required": false ,
             "value": "https://telegra.ph/file/360cdc2481c0d16400df0.png"
         },
         "IMG_2": {
-            "description": "ALIVE BUAT FOTO PAS COMMAND ALIVE",
+            "description": "STREAMING STARTED",
             "required": false ,
             "value": "https://telegra.ph/file/360cdc2481c0d16400df0.png"
         },

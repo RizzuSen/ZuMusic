@@ -46,10 +46,10 @@ async def skip(client, m: Message):
         [
             [
                 InlineKeyboardButton(
-                    text="• Mᴇɴᴜ", callback_data="cbmenu"
+                    text="• MENU", callback_data="cbmenu"
                 ),
                 InlineKeyboardButton(
-                    text="• Cʟᴏsᴇ", callback_data="cls"
+                    text="• CLOSE", callback_data="cls"
                 ),
             ]
         ]

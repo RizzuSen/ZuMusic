@@ -1,5 +1,3 @@
-# Copyright (C) 2021 By hdiiofficial
-
 from driver.queues import QUEUE
 from pyrogram import Client, filters
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup

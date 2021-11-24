@@ -11,7 +11,7 @@ from config import (
     OWNER_NAME,
     UPDATES_CHANNEL,
 )
-from teks.py import START_BOT, UNMUTE
+from teks import START_BOT, UNMUTE
 from program import __version__
 from driver.filters import command, other_filters
 from pyrogram import Client, filters

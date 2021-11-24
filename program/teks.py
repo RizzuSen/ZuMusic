@@ -1,2 +1,9 @@
 #Code by hdiiofficial
-START_BOT = "
+START_BOT = "TEST"
+PROSES_BOT = ""
+DONLOT_BOT = ""
+UPLOAD_BOT = ""
+SKIP_BOT = ""
+STOP_BOT = ""
+MUTE_BOT = ""
+UNMUTE_BOT = ""

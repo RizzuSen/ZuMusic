@@ -11,13 +11,14 @@ from config import (
     OWNER_NAME,
     UPDATES_CHANNEL,
 )
+from teks.py import START_BOT, UNMUTE
 from program import __version__
 from driver.filters import command, other_filters
 from pyrogram import Client, filters
 from pyrogram import __version__ as pyrover
 from pytgcalls import (__version__ as pytover)
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
-from teks.py import ( START_BOT ,UNMUTE )
+
 __major__ = 0
 __minor__ = 2
 __micro__ = 1

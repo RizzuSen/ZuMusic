@@ -17,7 +17,7 @@ from pyrogram import Client, filters
 from pyrogram import __version__ as pyrover
 from pytgcalls import (__version__ as pytover)
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
-
+from teks.py import ( START_BOT ,UNMUTE )
 __major__ = 0
 __minor__ = 2
 __micro__ = 1
@@ -54,7 +54,7 @@ async def start_(client: Client, message: Message):
     await message.reply_text(
         f"""✨ **Welcome {message.from_user.mention()} !**\n
 💭 [{BOT_NAME}](https://t.me/{BOT_USERNAME}) **Membantu Anda Memutar Musik dan Video di GROUP melalui obrolan video**
-
+{START_BOT}
 💡 **CARA PENGGUNAAN BOT KLIK COMMAND »HELP MENU **
 """,
         reply_markup=InlineKeyboardMarkup(

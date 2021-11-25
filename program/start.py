@@ -54,7 +54,7 @@ async def start_(client: Client, message: Message):
     await message.reply_text(
         f"""✨ **Welcome {message.from_user.mention()} !**\n
 💭 [{BOT_NAME}](https://t.me/{BOT_USERNAME}) **Membantu Anda Memutar Musik dan Video di GROUP melalui obrolan video**
-{START_BOT}
+
 💡 **CARA PENGGUNAAN BOT KLIK COMMAND »HELP MENU **
 """,
         reply_markup=InlineKeyboardMarkup(

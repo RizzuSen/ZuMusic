@@ -96,7 +96,7 @@ async def alive(client: Client, message: Message):
                     "📣 Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
             ],
-         [InlineKeyboardButton("👩‍💻SUPPORT👩‍💻", url=f"https://telegra.ph/hdiiofficialbotsupport-11-17",)]
+         [InlineKeyboardButton("👩‍💻SUPPORT👩‍💻", url=f"https://t.me/hdiiofficialupdate",)]
         ]
     )
 

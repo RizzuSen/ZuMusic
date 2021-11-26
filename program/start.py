@@ -135,4 +135,6 @@ async def start_(client: Client, message: Message):
     await message.reply_text(
      f"""LU GA BACA DI BAWAH ADD GROUP ADA HELP MENU?""",
 
-keyboard = InlineKeyboardMarkup(
+         keyboard = InlineKeyboardMarkup(
+              [InlineKeyboardButton("👩‍💻SUPPORT👩‍💻", url=f"https://t.me/hdiiofficialupdate",)] 
+         )

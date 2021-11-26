@@ -128,14 +128,3 @@ async def get_uptime(client: Client, message: Message):
         f"• **start time:** `{START_TIME_ISO}`"
     )
 
-@Client.on_message(
-    command(["help", f"help@{BOT_USERNAME}"]) & filters.private & ~filters.edited
-)
-async def help(client: Client, message: Message):
-    await message.reply_text(
-     f"""LU GA BACA DI BAWAH ADD GROUP ADA HELP MENU?""",
-
-         keyboard = InlineKeyboardMarkup(
-              [InlineKeyboardButton("BACK", callback_data="cbstart",)] 
-         ),
-)

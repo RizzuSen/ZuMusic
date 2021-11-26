@@ -127,3 +127,10 @@ async def get_uptime(client: Client, message: Message):
         f"• **uptime:** `{uptime}`\n"
         f"• **start time:** `{START_TIME_ISO}`"
     )
+
+@Client.on_message(
+    command(["help", f"help@{BOT_USERNAME}"]) & filters.private & ~filters.edited
+)
+async def start_(client: Client, message: Message):
+    await message.reply_text(
+     f"""LU GA BACA DI BAWAH ADD GROUP ADA HELP MENU?""")

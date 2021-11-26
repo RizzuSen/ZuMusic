@@ -136,5 +136,5 @@ async def start_(client: Client, message: Message):
      f"""LU GA BACA DI BAWAH ADD GROUP ADA HELP MENU?""",
 
          keyboard = InlineKeyboardMarkup(
-              [InlineKeyboardButton("👩‍💻SUPPORT👩‍💻", url=f"https://t.me/hdiiofficialupdate",)] 
+              [InlineKeyboardButton("BACK", callback_data="cbstart",)] 
          )

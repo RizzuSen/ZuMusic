@@ -133,4 +133,6 @@ async def get_uptime(client: Client, message: Message):
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
-     f"""LU GA BACA DI BAWAH ADD GROUP ADA HELP MENU?""")
+     f"""LU GA BACA DI BAWAH ADD GROUP ADA HELP MENU?""",
+
+keyboard = InlineKeyboardMarkup(

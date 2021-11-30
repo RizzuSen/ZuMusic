@@ -85,3 +85,30 @@ async def closed_handler(client: PyTgCalls, chat_id: int):
 async def kicked_handler(client: PyTgCalls, chat_id: int) -> None:
    if chat_id in QUEUE:
       clear_queue(chat_id)
+
+@call_py.on_closed_voice_chat()
+async def closed_voice_chat_handler(_, chat_id: int):
+    if chat_id in QUEUE:
+        clear_queue(chat_id)
+
+
+@call_py.on_left()
+async def left_handler(_, chat_id: int):
+    if chat_id in QUEUE:
+        clear_queue(chat_id)
+
+
+@call_py.on_stream_end()
+async def stream_end_handler(_, u: Update):
+    if isinstance(u, StreamAudioEnded):
+        chat_id = u.chat_id
+        print(chat_id)
+        op = await skip_current_song(chat_id)
+        if op==1:
+           await bot.send_message(chat_id, "✅ __Queues__ **is empty**\n\n» **userbot leaving video chat**")
+        elif op==2:
+           await bot.send_message(chat_id, "❌ **an error occurred**\n\n» **Clearing** __Queues__ **and leaving video chat.**")
+        else:
+         await bot.send_message(chat_id, f"💡 **Streaming next track**\n\n🏷 **Name:** [{op[0]}]({op[1]}) | `{op[2]}`\n💭 **Chat:** `{chat_id}`", disable_web_page_preview=True, reply_markup=keyboard)
+    else:
+       pass

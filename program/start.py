@@ -56,6 +56,10 @@ async def start_(client: Client, message: Message):
 💭 [{BOT_NAME}](https://t.me/{BOT_USERNAME}) **Membantu Anda Memutar Musik dan Video di GROUP melalui obrolan video**
 
 💡 **CARA PENGGUNAAN BOT KLIK COMMAND »HELP MENU **
+   **KAMI MEMILIKI BEBERAPA FITUR**
+     •PLAY VIDEO DI OS
+     •DOWNLOAD MUSIC DAN VIDEO
+     •PLAY MUSIC DI OS
 """,
         reply_markup=InlineKeyboardMarkup(
             [

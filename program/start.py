@@ -60,6 +60,7 @@ async def start_(client: Client, message: Message):
      •PLAY VIDEO DI OS
      •DOWNLOAD MUSIC DAN VIDEO
      •PLAY MUSIC DI OS
+     GABISA MAKE BACA HELP MENU DULU GOBLOK
 """,
         reply_markup=InlineKeyboardMarkup(
             [

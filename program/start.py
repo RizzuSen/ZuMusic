@@ -70,7 +70,7 @@ async def start_(client: Client, message: Message):
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("🔖HELP MENU❓", url=f"https://telegra.ph/help-menu-11-26")],
+                [InlineKeyboardButton("🔖HELP MENU❓", url=f"https://telegra.ph/commandhdiiofficialmusic-11-17")],
                 [
                     InlineKeyboardButton(
                         "👥GRUOP SUPPORT", url=f"https://t.me/{GROUP_SUPPORT}"

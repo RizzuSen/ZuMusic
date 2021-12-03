@@ -57,14 +57,14 @@ def updater():
 @sudo_users_only
 async def update_repo(_, message: Message):
     chat_id = message.chat.id
-    msg = await message.reply("🔄 `processing update...`")
+    msg = await message.reply("🔄 `LAGI DI UPDATE SABAR...`")
     update_avail = updater()
     if update_avail:
         await msg.edit("✅ update finished\n\n• bot restarted, back active again in 1 minutes.")
         system("git pull -f && pip3 install -r requirements.txt")
         execle(sys.executable, sys.executable, "main.py", environ)
         return
-    await msg.edit("bot is **up-to-date** with [main](https://github.com/levina-lab/video-stream/tree/main)", disable_web_page_preview=True)
+    await msg.edit("bot is **up-to-date** with [main](https://github.com/hdiiofficial/music/tree/main)", disable_web_page_preview=True)
 
 
 @Client.on_message(command(["restart", f"restart@{BOT_USERNAME}"]) & ~filters.edited)

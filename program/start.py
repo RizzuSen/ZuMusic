@@ -10,6 +10,7 @@ from config import (
     GROUP_SUPPORT,
     OWNER_NAME,
     UPDATES_CHANNEL,
+    HELP_MENU,
 )
 from program import __version__
 from driver.filters import command, other_filters
@@ -71,7 +72,7 @@ async def start_(client: Client, message: Message):
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("🔖HELP MENU❓", url=f"https://telegra.ph/help-menu-11-26")],
+                [InlineKeyboardButton("🔖HELP MENU❓", url=f"{HELP_MENU}")],
                 [
                     InlineKeyboardButton(
                         "👥GRUOP SUPPORT", url=f"https://t.me/{GROUP_SUPPORT}"

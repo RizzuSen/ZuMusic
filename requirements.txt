@@ -1,11 +1,12 @@
-TgCrypto
+tgcrypto
 asyncio
 ffmpeg-python
 py-tgcalls
-pyrogram==1.2.11
-youtube-search-python==1.4.9
-youtube-search
 httpx==0.13.3
+git+https://github.com/pyrogram/pyrogram@master
+youtube-search-python==1.4.9
+yt-dlp==2021.11.10.1
+youtube-search
 python-dotenv
 dnspython
 gitpython
@@ -14,7 +15,6 @@ aiohttp
 requests
 heroku3
 motor
-yt-dlp
 psutil
 future
 wget

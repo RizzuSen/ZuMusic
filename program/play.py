@@ -2,7 +2,6 @@ import asyncio
 import re
 
 from youtube_search import YoutubeSearch
-import converter
 from youtube import youtube
 from config import DURATION_LIMIT, que, SUDO_USERS
 from cache.admins import admins as a

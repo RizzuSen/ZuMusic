@@ -8,6 +8,7 @@ youtube-search-python==1.4.9
 yt-dlp==2021.11.10.1
 youtube-search
 python-dotenv
+ffmpeg
 dnspython
 gitpython
 aiofiles
@@ -18,3 +19,6 @@ motor
 psutil
 future
 wget
+ffmpeg-python
+heroku3
+

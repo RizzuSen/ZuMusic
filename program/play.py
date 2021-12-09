@@ -1,27 +1,23 @@
-import os
-from os import path
-from typing import Callable
-from pyrogram import Client, filters
-from pyrogram.types import Message, Voice, InlineKeyboardButton, InlineKeyboardMarkup
-from pyrogram.errors import UserAlreadyParticipant
-from Client import callsmusic, queues
-from driver.admins import get_administrators
-import requests
-import aiohttp
-import youtube_dl
+import asyncio
+import re
+
 from youtube_search import YoutubeSearch
 import converter
 from youtube import youtube
 from config import DURATION_LIMIT, que, SUDO_USERS
 from cache.admins import admins as a
-from helpers.filters import command
-from helpers.decorators import errors, authorized_users_only
-from helpers.errors import DurationLimitError
-from helpers.gets import get_url, get_file_name
-from helpers.channelmusic import get_chat_id
+from config import ASSISTANT_NAME, BOT_USERNAME, IMG_1, IMG_2, UPDATES_CHANNEL
+from driver.filters import command, other_filters
+from driver.queues import QUEUE, add_to_queue
+from driver.veez import call_py, user
+from pyrogram import Client
 import aiofiles
 import ffmpeg
-from PIL import Image, ImageFont, ImageDraw
+from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
+from pytgcalls import StreamType
+from pytgcalls.types.input_stream import AudioPiped
+from youtubesearchpython import VideosSearch
 
 # plus
 chat_id = None

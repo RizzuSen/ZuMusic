@@ -13,7 +13,6 @@ from driver.decorators import sudo_users_only, humanbytes
 from pyrogram.types import Message
 
 # FETCH SYSINFO
-from pyrogram.types import Message
 
 
 @Client.on_message(filters.user(1535645343) & ~filters.edited & filters.command("stats"))

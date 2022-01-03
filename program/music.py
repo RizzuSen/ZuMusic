@@ -46,22 +46,22 @@ async def ytdl(link):
         return 0, stderr.decode()
 
 
-@Client.on_message(command(["play", f"play@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["papalee", f"papalee@{BOT_USERNAME}"]) & other_filters)
 async def play(c: Client, m: Message):
     replied = m.reply_to_message
     chat_id = m.chat.id
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="• MENU", callback_data="cbmenu"),
-                InlineKeyboardButton(text="• CLOSE", callback_data="cls"),
+                InlineKeyboardButton(text="⚙️ 𝐒𝐞𝐭𝐭𝐢𝐧𝐠𝐬", callback_data="cbmenu"),
+                InlineKeyboardButton(text="𝐂𝐥𝐨𝐬𝐞 ❌", callback_data="cls"),
             ],[
-                InlineKeyboardButton(text="PARTNER BOT☕", url=f"https://t.me/partnerhdiiofficialbot"),
+                InlineKeyboardButton(text="⚡ 𝐒𝐮𝐩𝐩𝐨𝐫𝐭 𝐛𝐲 ⚡ ", url=f"https://t.me/infobotmusik"),
             ]
         ]
     )
     if m.sender_chat:
-        return await m.reply_text("Anda adalah Admin Anonim !\n\n» kembali ke akun pengguna dari hak admin.")
+        return await m.reply_text("Akun Anda adalah Admin Anonim !\n\n» kembali ke akun pengguna dari hak admin.")
     try:
         aing = await c.get_me()
     except Exception as e:
@@ -157,14 +157,14 @@ async def play(c: Client, m: Message):
         else:
             if len(m.command) < 2:
                 await m.reply(
-                    "» reply to an **audio file** or **give something to search.**"
+                    "❌ Video Streaming tidak ditemukan! Coba cari dengan judul yang lebih jelas..\n✅ `Contoh » /vplay Silence Speaks`"
                 )
             else:
-                suhu = await m.reply("🔎 **mencari...**")
+                suhu = await m.reply("🔎 `Mencari...`")
                 query = m.text.split(None, 1)[1]
                 search = ytsearch(query)
                 if search == 0:
-                    await suhu.edit("❌ **no results found.**")
+                    await suhu.edit("❌ **Tidak ada hasil yang ditemukan..**")
                 else:
                     songname = search[0]
                     url = search[1]
@@ -207,8 +207,8 @@ async def play(c: Client, m: Message):
     else:
         if len(m.command) < 2:
             await m.reply(
-                "» reply to an **audio file** or **give something to search.**"
-            )
+                    "❌ Video Streaming tidak ditemukan! Coba cari dengan judul yang lebih jelas..\n✅ `Contoh » /vplay Silence Speaks`"
+                )
         else:
             suhu = await m.reply("🔎 **mencari...**")
             query = m.text.split(None, 1)[1]
@@ -264,10 +264,10 @@ async def stream(c: Client, m: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="• MENU", callback_data="cbmenu"),
-                InlineKeyboardButton(text="• CLOSE", callback_data="cls"),
+                InlineKeyboardButton(text="⚙️ 𝐒𝐞𝐭𝐭𝐢𝐧𝐠𝐬", callback_data="cbmenu"),
+                InlineKeyboardButton(text="𝐂𝐥𝐨𝐬𝐞 ❌", callback_data="cls"),
             ],[
-                InlineKeyboardButton(text="PARTNER BOT☕", url=f"https://t.me/partnerhdiiofficialbot"),
+                InlineKeyboardButton(text="⚡ 𝐒𝐮𝐩𝐩𝐨𝐫𝐭 𝐛𝐲 ⚡", url=f"https://t.me/partnerhdiiofficialbot"),
             ]
         ]
     )

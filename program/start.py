@@ -49,7 +49,7 @@ async def _human_time_duration(seconds):
 
 
 @Client.on_message(
-    command(["start", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
+    command(["lerrrr", f"lerrrr@{BOT_USERNAME}"]) & filters.private & ~filters.edited
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
@@ -103,11 +103,11 @@ async def alive(client: Client, message: Message):
                     "📣 Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
             ],
-         [InlineKeyboardButton("👩‍💻SUPPORT👩‍💻", url=f"https://t.me/hdiiofficialupdate",)]
+         [InlineKeyboardButton("☕ Manage by ☕", url=f"https://t.me/SilenceSpe4ks",)]
         ]
     )
 
-    alive = f"**Hello {message.from_user.mention()}, saya {BOT_NAME}**\n\n✨ Bot berfungsi dengan normal\n🍀 My Master: [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n✨ Bot Version: `v{__version__}`\n🍀 Pyrogram Version: `{pyrover}`\n✨ Python Version: `{__python_version__}`\n🍀 PyTgCalls version: `{pytover.__version__}`\n✨ Uptime Status: `{uptime}`\n\n**Terima Kasih Telah Menambahkan Saya Ke GROUP Anda**\nSEMOGA HARIMU MENYENANGKAN\n\n\nDeveloved by @hdiiofficial ☕"
+    alive = f"**Hello {message.from_user.mention()}, saya {BOT_NAME}**\n\n✨ Bot berfungsi dengan normal\n🍀 My Master: [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n✨ Bot Version: `v{__version__}`\n🍀 Pyrogram Version: `{pyrover}`\n✨ Python Version: `{__python_version__}`\n🍀 PyTgCalls version: `{pytover.__version__}`\n✨ Uptime Status: `{uptime}`\n\n**Terima Kasih Telah Menambahkan Saya Ke GROUP Anda**\nSEMOGA HARIMU MENYENANGKAN\n\n\nDeveloved by [Ari](https://t.me/SilenceSpe4ks) ☕"
 
     await message.reply_photo(
         photo=f"{ALIVE_IMG}",
@@ -116,12 +116,12 @@ async def alive(client: Client, message: Message):
     )
 
 
-@Client.on_message(command(["ping", f"ping@{BOT_USERNAME}"]) & ~filters.edited)
+@Client.on_message(command(["pinguin", f"pinguin@{BOT_USERNAME}"]) & ~filters.edited)
 async def ping_pong(client: Client, message: Message):
     start = time()
     m_reply = await message.reply_text("pinging...")
     delta_ping = time() - start
-    await m_reply.edit_text("🏓 `PONG!!`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`")
+    await m_reply.edit_text("🏓 `PONG!!!`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`")
 
 
 @Client.on_message(command(["uptime", f"uptime@{BOT_USERNAME}"]) & ~filters.edited)

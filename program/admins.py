@@ -34,7 +34,7 @@ async def update_admin(client, message):
         new_admins.append(u.user.id)
     admins[message.chat.id] = new_admins
     await message.reply_text(
-        "✅ Bot **reloaded correctly !**\n✅ **Admin list** has been **updated !**"
+        "✅ Bot **reloaded correctly !**\n✅ **Admin list** has **updated !**"
     )
 
 
@@ -46,10 +46,10 @@ async def skip(client, m: Message):
         [
             [
                 InlineKeyboardButton(
-                    text="• MENU", callback_data="cbmenu"
+                    text="• Mᴇɴᴜ", callback_data="cbmenu"
                 ),
                 InlineKeyboardButton(
-                    text="• CLOSE", callback_data="cls"
+                    text="• Cʟᴏsᴇ", callback_data="cls"
                 ),
             ]
         ]
@@ -99,11 +99,11 @@ async def stop(client, m: Message):
         try:
             await call_py.leave_group_call(chat_id)
             clear_queue(chat_id)
-            await m.reply("✅ **NAH GITU COK DI END,AKHIRNYA ISTIRAHAT LU KIRA GA CAPE?.**")
+            await m.reply("✅ The userbot has disconnected from the video chat.")
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
     else:
-        await m.reply("❌ **nothing in streaming**")
+        await m.reply("❌ **nothing is streaming**")
 
 
 @Client.on_message(
@@ -230,7 +230,7 @@ async def cbstop(_, query: CallbackQuery):
         try:
             await call_py.leave_group_call(chat_id)
             clear_queue(chat_id)
-            await query.edit_message_text("✅ **NH GITU DONG DI END,CAPE MUTER MUSIC/VIDEO MULU**", reply_markup=bcl)
+            await query.edit_message_text("✅ **this streaming has ended**", reply_markup=bcl)
         except Exception as e:
             await query.edit_message_text(f"🚫 **error:**\n\n`{e}`", reply_markup=bcl)
     else:

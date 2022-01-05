@@ -10,7 +10,6 @@ from config import (
     GROUP_SUPPORT,
     OWNER_NAME,
     UPDATES_CHANNEL,
-    HELP_MENU,
 )
 from program import __version__
 from driver.filters import command, other_filters
@@ -49,36 +48,33 @@ async def _human_time_duration(seconds):
 
 
 @Client.on_message(
-    command(["lerrrr", f"lerrrr@{BOT_USERNAME}"]) & filters.private & ~filters.edited
+    command(["start", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
         f"""✨ **Welcome {message.from_user.mention()} !**\n
-💭 [{BOT_NAME}](https://t.me/{BOT_USERNAME}) **Membantu Anda Memutar Musik dan Video di GROUP melalui obrolan video**
+💭 [{BOT_NAME}](https://t.me/{BOT_USERNAME}) **Can Help you to play music and video on groups through the new Telegram's video chats!**
 
-💡 **CARA PENGGUNAAN BOT KLIK COMMAND »HELP MENU **
-   **KAMI MEMILIKI BEBERAPA FITUR**
-     •PLAY VIDEO DI OS
-     •DOWNLOAD MUSIC DAN VIDEO
-     •PLAY MUSIC DI OS
-     •MEMUTAR VIDEO STREAMING DARI YOUTUBE
-     GABISA MAKE BACA HELP MENU DULU GOBLOK
+💡 **Find out all the Bot's commands and how they work by clicking on the »  HELP MENU!\nIF YOU DONT KNOW HOW TO USE THIS BOT PLEASE READ HELP MENU!!!!!!**
+
 """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "➕ TAMBAHKAN KE GROUP ➕",
+                        "➕ADD BOT TO GROUP➕",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("🔖HELP MENU❓", url=f"{HELP_MENU}")],
+                [
+                 InlineKeyboardButton("🌐HELP MENU❔", url="https://telegra.ph/commandhdiiofficialmusic-11-17"),
+                ],
                 [
                     InlineKeyboardButton(
-                        "👥GRUOP SUPPORT", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "GROUPS", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "📣CH SUPPORT", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}"
                     ),
                 ],
             ]
@@ -98,16 +94,15 @@ async def alive(client: Client, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("✨ Group", url=f"https://t.me/{GROUP_SUPPORT}"),
+                InlineKeyboardButton("«GROUPS»", url=f"https://t.me/{GROUP_SUPPORT}"),
                 InlineKeyboardButton(
-                    "📣 Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    "«CHANNEL»", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
-            ],
-         [InlineKeyboardButton("☕ Manage by ☕", url=f"https://t.me/SilenceSpe4ks",)]
+            ]
         ]
     )
 
-    alive = f"**Hello {message.from_user.mention()}, saya {BOT_NAME}**\n\n✨ Bot berfungsi dengan normal\n🍀 My Master: [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n✨ Bot Version: `v{__version__}`\n🍀 Pyrogram Version: `{pyrover}`\n✨ Python Version: `{__python_version__}`\n🍀 PyTgCalls version: `{pytover.__version__}`\n✨ Uptime Status: `{uptime}`\n\n**Terima Kasih Telah Menambahkan Saya Ke GROUP Anda**\nSEMOGA HARIMU MENYENANGKAN\n\n\nDeveloved by [Ari](https://t.me/SilenceSpe4ks) ☕"
+    alive = f"**Hello {message.from_user.mention()}, i'm {BOT_NAME}**\n\n✨ Bot is working normally\n🍀 My Owner: [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n✨ Bot Version: `v{__version__}`\n🍀 Pyrogram Version: `{pyrover}`\n✨ Python Version: `{__python_version__}`\n🍀 PyTgCalls version: `{pytover.__version__}`\n✨ Uptime Status: `{uptime}`\n\n**Thanks for Adding me here, for playing video & music on your Group's video chat**\n\n\nManage With 💞 By [hdiiofficial](https://t.me/hdiiofficial) "
 
     await message.reply_photo(
         photo=f"{ALIVE_IMG}",
@@ -116,12 +111,12 @@ async def alive(client: Client, message: Message):
     )
 
 
-@Client.on_message(command(["pinguin", f"pinguin@{BOT_USERNAME}"]) & ~filters.edited)
+@Client.on_message(command(["ping", f"ping@{BOT_USERNAME}"]) & ~filters.edited)
 async def ping_pong(client: Client, message: Message):
     start = time()
     m_reply = await message.reply_text("pinging...")
     delta_ping = time() - start
-    await m_reply.edit_text("🏓 `PONG!!!`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`")
+    await m_reply.edit_text("🏓 `PONG!!`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`")
 
 
 @Client.on_message(command(["uptime", f"uptime@{BOT_USERNAME}"]) & ~filters.edited)
@@ -135,3 +130,14 @@ async def get_uptime(client: Client, message: Message):
         f"• **start time:** `{START_TIME_ISO}`"
     )
 
+@Client.on_message(
+    command(["help", f"help@{BOT_USERNAME}", "start", "start@{BOT_USERNAME}"]) & filters.group & ~filters.edited
+)
+async def help(client: Client, message: Message):
+    await message.reply_text(
+            f"Thanks for Adding me in Your Groups.\n<b><i>Music is alive.</i></b>\n\nIf You Dont Know How To Use Me,Please READ BUTTON HELP MENU !!!",
+            reply_markup=InlineKeyboardMarkup([ 
+             [InlineKeyboardButton("🌐HELP MENU❔", url="https://telegra.ph/commandhdiiofficialmusic-11-17"),]
+                ]
+                ),
+        )

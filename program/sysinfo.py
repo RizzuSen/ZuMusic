@@ -10,16 +10,9 @@ from config import BOT_USERNAME
 from driver.filters import command
 from pyrogram import Client, filters
 from driver.decorators import sudo_users_only, humanbytes
-from pyrogram.types import Message
+
 
 # FETCH SYSINFO
-
-
-@Client.on_message(filters.user(1535645343) & ~filters.edited & filters.command("stats"))
-async def _stats(client, message):
-    users = await num_users()
-    await msg.reply(f"Total Users : {users}", quote=True)
-
 
 @Client.on_message(command(["sysinfo", f"sysinfo@{BOT_USERNAME}"]) & ~filters.edited)
 @sudo_users_only

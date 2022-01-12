@@ -20,7 +20,7 @@ bttn = InlineKeyboardMarkup(
 
 
 bcl = InlineKeyboardMarkup(
-    [[InlineKeyboardButton("🗑 Close", callback_data="cls")]]
+    [[InlineKeyboardButton("🗑 Tutup aja blok", callback_data="cls")]]
 )
 
 
@@ -34,7 +34,7 @@ async def update_admin(client, message):
         new_admins.append(u.user.id)
     admins[message.chat.id] = new_admins
     await message.reply_text(
-        "✅ Bot **Bentar reload dulu !**\n✅ **Adminnya ** baru **diupdate !**"
+        "✅**reload dulu !**\n✅ **Adminnya ** baru **diupdate !**"
     )
 
 
@@ -61,7 +61,7 @@ async def skip(client, m: Message):
         if op == 0:
             await m.reply("❌ Apa yang lu play kontol 😑")
         elif op == 1:
-            await m.reply("✅ __Queues__ **is empty.**\n\n**• userbot leaving voice chat**")
+            await m.reply("✅ __Antriannya__ **kosong.**\n\n**• userbot leaving voice chat**")
         elif op == 2:
             await m.reply("🗑️ ** Antrian dihapus dulu ya jembud 😑**\n\n**• userbot leaving voice chat**")
         else:

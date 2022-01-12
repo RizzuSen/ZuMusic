@@ -15,57 +15,57 @@
         "API_ID": {
             "description": "your API_ID from my.telegram.org",
             "required": true ,
-            "value" : "1"
+            "value" : "7006742"
         },
         "API_HASH": {
             "description": "your API_HASH from my.telegram.org",
             "required": true ,
-            "value" : "4"
+            "value" : "e6d959454ef30d0fc5de8fe521ea3c89"
         },
         "BOT_TOKEN": {
             "description": "your bot token from @BotFather",
             "required": true ,
-            "value" : "1"
+            "value" : "2143213547:AAGVDfvkwHLcDIpffHL-JCyc0dvbJtpk080"
         },
         "BOT_USERNAME": {
             "description": "your bot username from @BotFather",
             "required": true ,
-            "value" : "h"
+            "value" : "@ejamusicbot"
         },
         "BOT_NAME": {
             "description": "fill with your bot name from @BotFather",
             "required": true ,
-            "value": "h"
+            "value": "@ejamusicbot"
         },
         "ASSISTANT_NAME": {
             "description": "fill with the assistant username account without @",
             "required": true ,
-            "value": "b"
+            "value": "ejamusicassistent"
         },
         "SESSION_NAME": {
             "description": "fill with the pyrogram String Session",
             "required": true ,
-            "value": ""
+            "value": "BQC6mlVUl-MkIUdtVgTI9H6aD-d_fgeOUwEIDDxxbDiIabQ2rx3G6Bfo6pCG9km6d18vWMlBAoRDR6kE8oqE2VFxG7z8finp2JVEirxddNgB8vvpPaUhT5bMiR-21v3xVsJiYGD7nGai01nmY88NZZUyCanaRUp9Ag_ZRKEcb1KOznoZR2szg_GMmkwbwgd97IIlNxWonQFL39sowgYg1zfWxbcYswAa9vuqFzFJf9pbpb2FtqL4_g78UTHspiJLAGD6us_5-FvtnE7TLEX1ybHWQJGoI8hivR7v1ahVjUqTBW2yAKb6VWZcN-hIQ5o1w7ic2zDT2wO8DgQSTgpy_alsf82HTQA"
         },
         "SUDO_USERS": {
             "description": "list of user ids to be added to sudo member list, or just fill with your id",
             "required": true ,
-            "value": "1"
+            "value": "2094124183"
         },
         "GROUP_SUPPORT": {
             "description": "if you have group, then fill the group username here without @",
             "required": true,
-            "value": "i"
+            "value": "AnonymousSexies"
         },
         "UPDATES_CHANNEL": {
             "description": "if you have channel, then fill the channel username here without @",
             "required": true,
-            "value": "B"
+            "value": "Nyanyianeja"
         },
         "OWNER_NAME": {
             "description": "fill with your telegram account username without @",
             "required": true,
-            "value": "h"
+            "value": "Iyakahmaniissss"
         },
         "ALIVE_NAME": {
             "description": "fill with your telegram account nickname/name",

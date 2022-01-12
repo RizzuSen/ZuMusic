@@ -20,7 +20,7 @@ bttn = InlineKeyboardMarkup(
 
 
 bcl = InlineKeyboardMarkup(
-    [[InlineKeyboardButton("🗑 Tutup aja blok", callback_data="cls")]]
+    [[InlineKeyboardButton("🗑 Close ", callback_data="cls")]]
 )
 
 
@@ -46,10 +46,10 @@ async def skip(client, m: Message):
         [
             [
                 InlineKeyboardButton(
-                    text="• ini menunya tolol 😑", callback_data="cbmenu"
+                    text="• Menu ", callback_data="cbmenu"
                 ),
                 InlineKeyboardButton(
-                    text="• Tutup aja blok", callback_data="cls"
+                    text="• Close ", callback_data="cls"
                 ),
             ]
         ]
@@ -59,11 +59,11 @@ async def skip(client, m: Message):
     if len(m.command) < 2:
         op = await skip_current_song(chat_id)
         if op == 0:
-            await m.reply("❌ Apa yang lu play kontol 😑")
+            await m.reply("❌ Apaan yang lu play kontol 😑")
         elif op == 1:
-            await m.reply("✅ __Antriannya__ **kosong.**\n\n**• userbot leaving voice chat**")
+            await m.reply("✅ __Antriannya__ **kosong.**\n\n**• yaudah gw turun yak **")
         elif op == 2:
-            await m.reply("🗑️ ** Antrian dihapus dulu ya jembud 😑**\n\n**• userbot leaving voice chat**")
+            await m.reply("🗑️ ** Antrian dihapus dulu ya jembud 😑**\n\n**• yaudah gw turun yak**")
         else:
             await m.reply_photo(
                 photo=f"{IMG_3}",
@@ -99,7 +99,7 @@ async def stop(client, m: Message):
         try:
             await call_py.leave_group_call(chat_id)
             clear_queue(chat_id)
-            await m.reply("✅Anak pantek nge end bilang bilang 😑.")
+            await m.reply("✅ Nah gini kan gw bisa istirahat.")
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
     else:
@@ -134,7 +134,7 @@ async def resume(client, m: Message):
         try:
             await call_py.resume_stream(chat_id)
             await m.reply(
-                "▶️ ** Iya iya gw lanjutin .**\n\n• **To pause the stream, use the**\n» /pause command."
+                "▶️ ** Iya iya gw lanjutin .**\n\n• ** Buat nerusin lagunya **\n» /pause command."
             )
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
@@ -152,7 +152,7 @@ async def mute(client, m: Message):
         try:
             await call_py.mute_stream(chat_id)
             await m.reply(
-                "🔇 **Userbot muted.**\n\n• **To unmute the userbot, use the**\n» /unmute command."
+                "🔇 **Dimute mulu.**\n\n• **Buat unmute **\n» /unmute command."
             )
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
@@ -170,7 +170,7 @@ async def unmute(client, m: Message):
         try:
             await call_py.unmute_stream(chat_id)
             await m.reply(
-                "🔊 **Userbot unmuted.**\n\n• **To mute the userbot, use the**\n» /mute command."
+                "🔊 **Nah gini kan enak bisa nyanyi.**\n\n• **Buat mute userbot **\n» /mute command."
             )
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
@@ -195,7 +195,7 @@ async def cbpause(_, query: CallbackQuery):
         except Exception as e:
             await query.edit_message_text(f"🚫 **error:**\n\n`{e}`", reply_markup=bcl)
     else:
-        await query.answer("❌ Apa yang mau lu play kontol 😑", show_alert=True)
+        await query.answer("❌ Apanya yang mau diplay kontol ! ", show_alert=True)
 
 
 @Client.on_callback_query(filters.regex("cbresume"))
@@ -210,12 +210,12 @@ async def cbresume(_, query: CallbackQuery):
         try:
             await call_py.resume_stream(chat_id)
             await query.edit_message_text(
-                "▶️iya iya gw lanjutin ngentod 😑", reply_markup=bttn
+                "▶️ iya iya gw lanjutin ngentod ! ", reply_markup=bttn
             )
         except Exception as e:
             await query.edit_message_text(f"🚫 **error:**\n\n`{e}`", reply_markup=bcl)
     else:
-        await query.answer("❌ Apanya yang mau diplay kontol 😑", show_alert=True)
+        await query.answer("❌ Apanya yang mau diplay kontol ! ", show_alert=True)
 
 
 @Client.on_callback_query(filters.regex("cbstop"))
@@ -234,7 +234,7 @@ async def cbstop(_, query: CallbackQuery):
         except Exception as e:
             await query.edit_message_text(f"🚫 **error:**\n\n`{e}`", reply_markup=bcl)
     else:
-        await query.answer("❌ Apa yang mau diplay kontol 😑", show_alert=True)
+        await query.answer("❌ Apanya yang mau diplay kontol ! ", show_alert=True)
 
 
 @Client.on_callback_query(filters.regex("cbmute"))
@@ -254,7 +254,7 @@ async def cbmute(_, query: CallbackQuery):
         except Exception as e:
             await query.edit_message_text(f"🚫 **error:**\n\n`{e}`", reply_markup=bcl)
     else:
-        await query.answer("❌Apanya yang mau diplay tolol 😑 ", show_alert=True)
+        await query.answer("❌ Apanya yang mau diplay kontol ! ", show_alert=True)
 
 
 @Client.on_callback_query(filters.regex("cbunmute"))
@@ -274,7 +274,7 @@ async def cbunmute(_, query: CallbackQuery):
         except Exception as e:
             await query.edit_message_text(f"🚫 **error:**\n\n`{e}`", reply_markup=bcl)
     else:
-        await query.answer("❌Apanya yang mau diplay tolol 😑 ", show_alert=True)
+        await query.answer("❌ Apanya yang mau diplay kontol ! ", show_alert=True)
 
 
 @Client.on_message(

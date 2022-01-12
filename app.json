@@ -9,8 +9,8 @@
         "pyrogram"
     ],
     "website": "https://botostore.com/c/hdiiofficial_bot",
-    "repository": "https://github.com/hdiiofficial/music",
-    "success_url": "https://t.me/hdiiofficial",
+    "repository": "https://github.com/Ejaaaa1/Ejamusic",
+    "success_url": "https://t.me/Iyakahmaniissss",
     "env": {
         "API_ID": {
             "description": "your API_ID from my.telegram.org",
@@ -70,7 +70,7 @@
         "ALIVE_NAME": {
             "description": "fill with your telegram account nickname/name",
             "required": true,
-            "value": "h"
+            "value": "Ejamusicbot"
         },
        "ALIVE_IMG": {
             "description": "ALIVE BUAT FOTO PAS COMMAND ALIVE",

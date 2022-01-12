@@ -99,7 +99,7 @@ async def stop(client, m: Message):
         try:
             await call_py.leave_group_call(chat_id)
             clear_queue(chat_id)
-            await m.reply("✅ The userbot has disconnected from the video chat.")
+            await m.reply("✅Anak pantek nge end bilang bilang 😑.")
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
     else:
@@ -210,7 +210,7 @@ async def cbresume(_, query: CallbackQuery):
         try:
             await call_py.resume_stream(chat_id)
             await query.edit_message_text(
-                "▶️ the streaming has resumed", reply_markup=bttn
+                "▶️iya iya gw lanjutin ngentod 😑", reply_markup=bttn
             )
         except Exception as e:
             await query.edit_message_text(f"🚫 **error:**\n\n`{e}`", reply_markup=bcl)

@@ -29,6 +29,16 @@ keyboard = InlineKeyboardMarkup(
         ]
     )
 
+async def get_playmode(chat_id: int) -> str:
+    mode = playmode.get(chat_id)
+    if not mode:
+        mode = await playmodedb.find_one({"chat_id": chat_id})
+        if not mode:
+            playmode[chat_id] = "Direct"
+            return "Direct"
+        playmode[chat_id] = mode["mode"]
+        return mode["mode"]
+    return mode
 
 async def skip_current_song(chat_id):
     if chat_id in QUEUE:
